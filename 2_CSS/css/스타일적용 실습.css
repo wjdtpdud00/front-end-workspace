@@ -1,0 +1,49 @@
+/*여백을 0으로 만들어준다.*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box
+}
+/*body에 색을 입힌다.*/
+body{
+    background-color: aquamarine;
+    background: linear-gradient(purple,pink);/*두가지 색상 선택 가능*/
+    height: 100vh;/*vh : 해당하는 페이지의 높이를 몇% 적용할꺼니?*/
+    padding: ;
+}
+.size-test{
+    /* background-color: white;*/
+    border: 2px solid; 
+    width: 320px;
+    height: 350px;
+    background-color: white;
+    margin : 50px auto;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;  
+    box-sizing : border-box /*박스 사이즈를 border(박스)에 맞추겠다.*/
+}
+.size-test img{
+
+    border-radius: 50%; /*둥글게 만드는 태그, 동그라미는 50%*/
+    width: 130px;
+    height: 130px;
+    object-fit: cover;/*사진 가운데 부분만 자르기*/
+}
+.size-test h1{
+    font-size: 1.drem;
+    color: rgb(143, 41, 41);
+    margin-top: 5px;
+}
+.size-test a{
+     display: block;/*주소연결 없애기*/
+     text-decoration: none;/*밑줄 없애기*/
+     color: white;
+     background-color: lightsalmon;
+     padding: 10px;
+     margin: 12px 0;
+     font-weight: bold;/*글자 두껍게*/
+}
+.size-test a:hober{
+    background-color: black;
+}

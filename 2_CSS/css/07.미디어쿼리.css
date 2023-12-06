@@ -1,0 +1,75 @@
+body,p,h3{
+    margin: 0;
+}
+.container{
+    background-color: cornflowerblue;
+}
+#con-1{
+    font-size: 0;
+}
+#con2::after{ 
+    content: "clear!";   /* 단점 : 글씨가 있어야 채워짐*/
+    clear: both;
+    visibility: hidden; /*글자를 없앰, 배경만 남게함.*/
+    display: block;
+    height: 0;
+}
+#con3::after{
+    content: both;
+    clear: both;
+    display: block;
+}
+.item-inline-block {   
+    display: inline;
+    font-size: 1rem;
+    vertical-align: top;  /*위로 올리고싶을때*/
+}
+.item-style-1{
+    background-color: paleturquoise;
+}
+.item-style-2{
+    background-color: palevioletred;
+}
+.item-float{
+    float: left;/*왼쪽정렬, 공중에 띄어버린다. clear와 같이 써야함*/
+}
+.item-mediaquery{
+    float: left;
+}
+footer{
+    background-color: darkgray;
+    padding: 5%; /*위로띄우기*/
+    /* clear: both; */
+}
+
+/* 미디어 쿼리는 반응형 때문에 나옴
+반응형... section1  section2   이중으로  
+줄일때마다 줄어듬. */
+
+/*미디어쿼리*/
+/* 700px 아래에 해당하는 화면 적용(media qauery 바깥에서 적용) */
+/* 700px 이상부터 적용 */
+@media screen and (min-width:700px) {
+    .item-mediaquery{
+        float: left;
+    }
+    .item-style-1{
+        width: 40%;
+    }
+    .item-style-2{
+        width: 60%;
+    }
+    #con-3::after{
+        content: both;
+        clear: both;
+        display: block;
+    }
+  }  /*최대 넓이 500까지 색을주고, 그이상은 색을 안준다는 의미*/
+body{
+    background: black;
+}
+/* 1200px 이상부터 적용 */
+@media screen and (min-width:700px) and (max-width: 1200px){  /*최대 넓이 500까지 색을주고, 그이상은 색을 안준다는 의미*/
+    body{
+        background:red;
+    }
