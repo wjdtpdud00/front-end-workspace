@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 출력에 해당하는 태그들 
+        // script는 자바에서 기본으로 사용하는태그, 바디에서 출력
+        // document.write(111);
+        // // document=html태그와 비슷하다
+        // window.console.log(222);
+        // // 검사>console탭에서 출력
+        // window.alert(333);
+        // 알림창으로 출력
+        // 객체란? 사물 하나하나가 객체임
+        // 변수란? 이름 나이 등 객체의 특징 , 이름붙이는것
+        // 함수란? 먹는다 걷는다등 행위
+        // window생략가능
+        /*여러줄 주석 하고싶을땐  이기호를 쓰시오.*/
+    </script>
+    <script src="script.js"></script>
+    <!-- 자바파일에 연결 -->
+    <!-- https://fontawesome.com/ 무료아이콘 -->
+    <script src="https://kit.fontawesome.com/4602e82315.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+    <!-- <i class="fa-solid fa-cloud"></i>  -->
+    <!-- 위에 사이트에서 받은 아이콘 코드 -->
+
+    <h1>변수</h1>
+    <p>어떠한 값을 저장하는 공간</p>
+    <!--키워드: var, const, let -->
+  <script>
+    // var키워드는 옛날방식이라 거의 사용 안함, 거의 const>let순으로 많이 사용함.
+   var varA = 100; //var 변수 = 값;
+   console.log(varA);
+   varA = "ㅋㅋㅋ"
+   console.log(varA);
+// const는 상수이고, 상수는 값을 수정할 수 없다.
+   const constB = 200; // const 변수 = 값;    > "="의미는 담아내다,저장하다 의미
+   console.log(constB); //출력값 :  200이 나옴
+//    constB = 300;
+
+// let은 변수이고, 변수는 값을 수정할 수 있다.
+   let letC = 300;
+   console.log(letC);
+   letC = "zzz";
+   console.log(letC);
+//    typeof: 데이터 타입 확인
+   console.log(typeof constB); //콘솔값이 nuber(숫자값)
+   console.log(typeof letC);   // 콘솔값 > strig(문자값)
+  </script>
+    
+<!-- 기본 데이터 타입 -->
+<!-- 문자열(string) -->
+<script>
+    // let letC = 'AAA'
+    // var varA = 100; //Var는 위에했던거 중복해서 쓰면 오류가 나야하는데, 잘 못잡아주어서 잘 안쓰게됨
+    let message = '"안녕" 이라고 말해';
+    message = '"안녕" 이라고 말해 "';
+    // "|"안녕|" 
+    console.log(message);
+    console.log(message[1]);
+    console.log(message.length); 
+    // 문자열의 길이를 뜻함
+
+    console.log("누군가에게", message);  //띄어쓰기하고 이어쓴다
+    console.log("누군가에게"+ message);  //바로 이어쓴다.
+    console.log(`누군가에게 ${message} `); //${} 변수로 인식함
+
+    const name = "기린이"
+    const age = 3;
+    console.log(`안녕?내 이름은 ${name}이고, 나이는 ${age}살`);
+
+</script>
+<!-- 숫자 -->
+<script>
+    const num1 = 10;
+    const num2 = 3; 
+    console.log(num1 + num2); //13
+    console.log(num1 - num2); //7
+    console.log(num1 * num2); //30
+    console.log(num1 / num2); //3.3333
+    console.log(num1 % num2); //나머지 : 1
+    console.log(num1 ** num2); //제곱 : 10^3 =1000
+
+    // 문자열-> 숫자
+    console.log(typeof"100"); //string 문자열로 출력
+    console.log(typeof Number("100")); // 바뀌어서 숫자로 출력
+    console.log(Number("Hello")); //NaN > 숫자가 아닌값이 떴다는 의미
+
+    //숫자-> 문자열
+    console.log(typeof String(200)); //string 문자열로 출력
+
+    // 실수 -> 정수
+    console.log(parseInt(1.8)); //값이 1로 나옴
+    
+</script>
+
+<!-- undefined, null -->
+<script>
+    let test;
+    console.log(test); //undifined>값을 매기지 않음이라는 의미
+                        // - 정의되지 않음
+
+    test=null;
+    console.log(test); //null 출력 > 아무것도 없음.
+</script>
+<!-- Boolean과 비교 연산자 -->
+<script>
+    console.log(true);
+    console.log(false);
+ let num3 = 100;
+ let num4 = 200;
+ console.log(num3 < num4); //100이 200보다 맞냐 틀리냐 ? > true 출력
+ console.log(num3 >= num4); //false 
+
+ num4 = "100";
+ console.log(num3 == num4); //true  == > 같다. 
+ console.log(num3 != num4); //false   !> 다르다 의미
+// 데이터 타입까지 체크
+ console.log(num3 === num4); //true -> false "==="는 타입까지  고려
+ console.log(num3 !== num4) //false ->true 
+
+ // 다른 자료형 -> Boolean 바꿔준다.
+ // false : 0, NaN, "", null, undefined
+ // 나머지는 true
+ console.log(Boolean(0)); //false
+// || : 또는(or)
+ console.log(a > 200 || a == 100); //false || true = true
+ console.log(a > 200 || a != 100); // false || false = false
+// ! :  아니다(not)
+ console.log(!true); //false  > !는 아니다 라는뜻.
+ console.log(!false); //true
+ console.log(!!(a > b)); // a:100, b:200 !!false  > false값 출력
+</script>
+
+</body>
+</html>
