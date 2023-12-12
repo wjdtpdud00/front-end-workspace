@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    
+    <!-- for문 : 반복시키는 역할
+    for(초기값;조건식; 증감식){}  -->
+  <!-- let은 for의 조건문 -->
+    <script>
+        //1~10까지 출력하세요
+        //전위연산자(++ㅜ, --n)와 후위연산자(n++, n--)
+        //공통점 > 연산 : n= n+1, n= n-1  // 차이점 > 전위연산자는 계산하고 출력, 후위는 출력하고 계산
+        let num = 2;
+        console.log(num++); //2 ->3
+        console.log(num); //3
+        console.log(--num);//2(전위라 계산해서 출력함.)
+        console.log(num); //2 (위에서 연계되어 출력됨)
+
+        // 복합연산자 
+        // num값을 3을 더한 값을 다시 num에 저장
+        num = num + 3; // 일반적으로 아는 방법
+        console.log(num);//5
+        num += 3; //복합대입연산자
+        console.log(num);  //8
+        for(let i = 1; i<=10; i++){// i=1 | true | 1 | 2->다시 조건식으로 순환됨
+            console.log(i);
+        }
+    </script>
+    
+    <script>
+        const movies = [
+        "서울의봄",
+        "3일의 휴가",
+         "나폴레옹",
+          "괴물",
+         "싱글 인 서울"];
+    // 영화 제목을 하나씩 출력해보세요
+  console.log(movies[0]);
+  console.log(movies[1]);
+  console.log(movies[2]);
+  console.log(movies[3]);
+  console.log(movies[4]);
+
+  //for문으로 출력한다면?
+i = movies+1;     
+for(let i = 0; i<=4; i++){ 
+console.log(movies[i]);}
+    </script>
+
+<!-- for in
+  for(const 인덱스 in 배열)-->
+<script>
+    for(const index in movies){v
+        console.log(index)
+        console.log(movies[index])}
+</script>
+<!-- for of
+for(const 값 of 배열){}-->
+<script>
+    for(const value of movies){
+        console.log(value);
+    }
+</script>
+<!-- while(조건){
+    조건이 true면 계속 
+} -->
+<!-- i = movies+1;     
+     for(let i = 0; i<=4; i++){ 
+     console.log(movies[i]);}
+ -->
+<script>
+    // while문으로 바꿔보기
+    // while(i < movies.legth) 무한 루프
+    while(i < movies.legth)
+</script>
+
+<!-- 무한루프 (자바에서 다룰거임)-->
+<script>
+    while(true){
+    // 조건을 걸어서 조건에 해당되면 안에서 stop!    
+    }
+
+   let check = confirm('계속 진행하시겠습니까?');//true,false
+   console.log(check);
+   while(confirm("계속 진행하시겠습니까?")){
+    console.log(++check);
+   }
+</script>
+<!-- break와 continue -->
+<script>
+    // 1~10까지 홀수만 출력
+    for(let number = 1; number <=10; number++){
+        if(number === 8){
+            break;
+        } //break는 수식에서 나가버림
+        if(number % 2 == 0){
+            continue;
+        } //continue는 새로 들어옴
+
+        console.log(number === 8);
+        console.log(number); //continue를 걸어서  여기까지 오지않음.
+    }
+
+    // while문!
+    let number = 0;
+    while(true){
+        number++; 
+        if(number == 10){
+            break;
+        }
+
+        if(number % 2 ==0) continue;
+        console.log(number);
+    }
+</script>
+
+<!-- 2차원 배열 + 증첩 for문  -->
+<script>
+    const arr = [[1,2,3],[4,5,6],[7,8,9]];
+    console.log(arr);
+    //[문제]1~9까지 순서대로 출력해보세요.
+    console.log(arr[0]); // [1, 2, 3]
+    console.log(arr[0][0]); //1
+    console.log(arr[0],[1]); //2
+    //...
+    console.log(arr[1][0]); //4
+    //..
+    console.log(arr[2][2]); //9
+   
+    //1~9 순서대로 출력해보세요(i, j, k..)
+    for(let i=0; i<=2; i++){
+        for(let j=0; j<=2; j++){
+            console.log(arr[i][j]);
+        }
+    }
+
+
+</script>
+</body>
+</html>
+
