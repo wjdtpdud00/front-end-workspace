@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수</h1>
+
+    <!-- 선언적 함수 -->
+    <script>
+        //function 함수명(입력값 or 매개변수 or 파라미터) {return 결과값;} //꼭 저기 모든값을 넣을 필요없음
+        //참고로 함수명 camelCase(낙타표기법)사용함.
+
+
+       function plus(a, b) {//plus 함수안에서 사용할 변수명 만들자.
+          return a + b;  // return 결과출력
+       } 
+      plus(10, 20); //plus함수 호출해서 값을 넣어줌.(fuction으로 연결됨.)
+      console.log(plus(10, 20)); //콘솔에서 볼 수 있게.
+
+    // 다르게 표현한다면,
+    //  const result = plus(10, 20); //plus함수 호출해서 값을 넣어줌.(fuction으로 연결됨.)
+    //  console.log(result); //콘솔에서 볼 수 있게.
+
+    function sample () {
+            console.log("ㅋㅋㅋㅋㅋㅋㅋ");
+        }
+       sample(); // 호출할  함수명이 필요하여 만듬.
+
+    const sample1 = sample();
+    console.log(sample1); //undifined 출력됨. -> 결과값이 없기 때문임.
+    
+    //두수의 값을 더하는 계산
+    console.log(plus(3 + 7));
+    console.log(4 + 9);  // plus를 이용하여  바로 출력할수있다.
+    </script>
+  <!-- 변수의 유효범위(Scope) -->
+   <script>
+     const num1 = 100;  //num1이 중복되어도 , 바깥과 함수안은 별개임.
+
+     function sample2(){
+        const num1 = 200;
+        console.log(`sample2 내부 : ${num1}`); //200출력
+        
+        function sample3(){// 함수안에 함수 만들기!
+        const num2 = 30000;
+        }
+     }
+
+     console.log(`sample2 외부 : ${num1}`); //100출력
+    //  console.log(`num2 : ${num2}`); // 오류뜸 (함수안에것을 수식밖으로 끄집어낼수 없음)   
+     sample2();
+   </script>
+
+   <!-- 익명 함수 -->
+   <script>
+    function 함수명(파라미터){return 결과값;}
+    const minus = function (a, b) { //function함수를 변수에 넣으면됨.
+    return a - b;
+    };
+    console.log(minus(70, 30)); //40
+   </script>
+
+   <!-- 화살표 함수 -->
+   <script>
+    const minus2 = (a, b) => { //화살표 함수를 변수에 넣으면됨
+        return a - b;
+    }; //생략 : const minus2 = ((a, b) => a - b);
+    console.log(minus2(100, 30)); //70
+
+   </script>
+
+   <!-- 배열.함수(콜백함수) : 빨리 처리되는것부터 처리한다. -->
+   <script>
+    const arr = [1, 2, 3, 4, 5, 6, 7];
+    // forEach : 값을 하나씩 가져올 수 있다.
+    //배열.forEach((값, 인덱스, 배열) => {});
+    arr.forEach((data, index, array) => {
+        console.log(data);
+        console.log(index);
+        console.log(array);
+    });
+
+    // map : 리턴한 값들을 기반으로 새로운 배열을 만든다.
+    //배열.map((값, 인덱스, 배열) => {});
+   const arr2 = arr.map(function(data) {
+        return data * 2;
+    });
+    console.log(arr2);
+
+    // filter : 리턴한 값들이 true인 것들만 모아서 새로운 배열을 만든다.
+    // 배열.filter((값, 인덱스, 배열) => {});
+    const arr3 = arr.filter((data) => {
+        return data % 2 === 0;
+    });
+    console.log(arr3);
+
+    // reduce : 하나의 결과값을 반환한다./배열이아님.
+    // 배열.reduce((누적된값, 값, 인덱스, 배열) => {}, 초기값);
+     const result2 = arr.reduce(function(accumulator, data) {//accumulator, data 누적된값
+        return accumulator + data;
+     }, 2);
+     console.log(result2); //배열에 있는 값들이 다 합친 값
+   </script>
+</body>
+</html>
