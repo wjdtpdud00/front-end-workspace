@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>올해 남은 시간</h1>
+    <h2 id="clock">시간</h2>
+
+    <input type="date" , id="date">
+    <button onclick></button>
+
+
+
+    <script>
+        //학습동영상 다시보기
+        //Date, Math 객체 
+        // 날짜 -  날짜 = 밀리세컨드 (1초 = 밀리세컨드/1000)
+        // 60초 =1분, 60분 = 1시간, 24시간 =1일
+
+        function dday() {
+            setInterval(() => {
+                const now = new date(now);
+                const last = new Date('2023-12-31 00:00:00');
+                const result = last - now;
+
+                const day = Math.floor(result / (1000 * 60 * 60 * 24));//초로 바꿔놓아라
+                const hour = Math.floor((result / (1000 * 60 * 60)) % 24);
+                result.innerHTML = `D-${day}`;
+                const minute = Math.floor((result / (1000 * 60)) % 60);
+                const second = Math.floor((result / 1000) % 60);
+
+                clock.innerHTML = `${day}d ${hour}h ${minute}m ${second}s`;
+            }, 1000)
+
+            console.log(day);
+            console.log(hour);
+            console.log(minute);
+            console.log(second);
+
+            console.log("년: ", now.getFullYear()); //2023
+            console.log("월: ", now.getMonth() + 1); //0~11이 나오기 때문에, +1을해야 12월이뜸
+            console.log("일: ", now.getDate())
+
+
+
+        }
+        // console.log(dday);
+
+        //담고
+        //호출
+    </script>
+</body>
+
+</html>

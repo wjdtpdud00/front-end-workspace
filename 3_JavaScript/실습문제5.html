@@ -10,11 +10,11 @@
     <!-- Q1. 세 수의 합을 구하는 함수를 만들어 주세요. -->
     <script>
       
-      function add1(a, b, c) {//plus 함수안에서 사용할 변수명 만들자.
+      function add(a, b, c) {//plus 함수안에서 사용할 변수명 만들자.
           return a + b + c;  // return 결과출력
        } 
-      add1(10, 20, 30); //plus함수 호출해서 값을 넣어줌.(fuction으로 연결됨.)
-      console.log(add1(10, 20, 30)); // 60
+      add(10, 20, 30); //plus함수 호출해서 값을 넣어줌.(fuction으로 연결됨.)
+      console.log(add(10, 20, 30)); // 60
 
       function add2(a, b, c){
         return a+ b+ c;
@@ -27,9 +27,9 @@
               삼각형의 넓이 = (삼각형의 너비 * 삼각형의 높이) / 2;
     -->
     <script>
-      
-      function triangle1(a, b){
-        return (a * b) / 2;
+                        
+      function triangle(width, height){
+        return (width * height) / 2;
       } 
       triangle1(5, 8);
       console.log(triangle1(5, 8)); // 20
@@ -46,8 +46,8 @@
              원의 넓이 = 반지름 * 반지름 * 3.14;
     -->
     <script>
-      function round (a){
-        return 2 * a * 3.14;
+      function round (r){
+        return 2 * r * 3.14;
       }
       console.log(round(2)); // 12.56
 
@@ -58,16 +58,19 @@
 
     <!-- Q4. 시작 수(n1)과 끝 수(n2)가 주어졌을 때 n1 ~ n2의 합계를 구하는 함수를 만들어 주세요 -->
 
-    <script>   
+    <script>                             
 
-    function sum(a, b){
-      for(let i = a; b <=20; i++){
-      sum += i; 
-    }}
+    function sum(n1, n2){
+      let total = 0;
+      for(i=n1; i<=n2; i++){
+      total +=i;
+      }
+       return total;
+    }
     console.log(sum);  
     
     // 165
-    console.log(sum2(100, 200)); // 15150
+    // console.log(sum2(100, 200)); // 15150
     </script>
 
     <!-- Q5. 물건 구매가가 주어졌을 때 할인율에 따라 지불 금액을 계산하는 함수를 만들어 주세요. 
@@ -77,15 +80,53 @@
                구매가가 100000원 이상 : 10%
     -->
     <script>
-      function calculate1 (a){
-        return a - a* 0.05;
-      }
-      console.log(calculate1(20000));
+      // [return여러개로 하는방법]
+      // function calculate (price){
+      //   if(price >= 100000){    //@범위표현(높은금액을 위에, 안걸리게)
 
-      function calculate2 (b){
-        return b - b* 0.075;
-      }
-      console.log(calculate2(65000)); // 60125
+      //     return price * 0.9;
+
+      //   } else if(price >= 50000){
+          
+      //     return price * 0.925;
+
+      //   }else if (price >= 10000){
+      //     return price * 0.95;
+      //   } else{
+      //     return price;
+      //   }
+      // }
+      // console.log(calculate (20000));
+
+    // [return 한개만 쓰는방법]
+    
+    function calculate (price){
+        let rate = 0;
+    if(price >= 100000){
+       rate = 10;
+    } else if(price >= 50000){
+       rate = 7.5; 
+    } else if(price >= 10000){
+       rate = 5;
+    } return price * ((100- rate)/100);
+  }
+
+  // function calculate2 (b){
+  //       return b - b* 0.075;
+  //     }
+  //     console.log(calculate2(65000)); // 60125
+
     </script>
+    <!-- // 가변파라미터(파라미터) : 안써요!
+    // console.log("합계")
+    // console.log("합계",12, "평균") -->
+<script>
+    function sum(...args) {
+      console.log(args);
+    }
+    sum(10, 20); //결과값
+    sum(10, 20, 30);
+    sum(10, 20, 30, 40);
+</script>
   </body>
 </html>
