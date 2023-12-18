@@ -1,107 +1,119 @@
-/*박스 모델*/
+/* 박스 모델 */
 /* width, height */
-.size-test{
+.size-test {
     height: 200px;
     background-color: cadetblue;
 }
-#fixed-size{
+
+#fixed-size {
     width: 200px;
 }
-#variable-size{
+
+#variable-size {
     width: 50%;
 }
 
-/*display*/
-.display{
- width:150px;
- height: 50px;
- background-color: antiquewhite;
- margin: 10px;
+/* display */
+.display {
+    width: 150px;
+    height: 50px;
+    background-color: antiquewhite;
+    margin: 10px;
 }
-.display-inline{
+
+.display-inline {
     display: inline;
 }
-.display-block{
+
+.display-block {
     display: block;
 }
-.display-inline-block{
+
+.display-inline-block {
     display: inline-block;
 }
+
 /* padding, margin */
-.space{
-    width:100px;
+.space {
+    width: 100px;
     height: 100px;
     background-color: beige;
 }
-#padding1{
+
+#padding1 {
     padding: 10px;
 }
-#padding2
-/*top, bottom, left, right*/
-{
+
+#padding2 {
+    /* top, bottom, left, right */
     padding-top: 50px;
     padding-right: 100px;
+
     /* 위/아래 : 50px, 좌/우 : 30px */
     padding: 50px 30px;
-    /*상 우 하 좌 : 시계방향 */
+
+    /* 상 우 하 좌 : 시계방향 */
     padding: 30px 50px 20px 40px;
 }
 
-#margin1{
+#margin1 {
     margin: 50px;
 }
-#margin2{
+
+#margin2 {
     margin-top: 60px;
-    margin-left: 20px
-    /*위/아래 50px, 좌/우 30px*/
+    margin-left: 20px;
+    /* 위/아래 50px, 좌/우 30px */
     margin: 50px 30px;
-    /*상 우 하 좌*/
-    margin : 30px 50px 20px 40px;
+    /* 상 우 하 좌 */
+    margin: 30px 50px 20px 40px;
 }
 
-/*테두리 스타일*/
-/* border : border-width border-style border-color*/
-.border{
+/* 테두리 스타일 */
+/* border : border-width border-style border-color */
+.border {
     width: 100px;
     height: 100px;
-    /*solid : 테두리를 실선으로 표시*/
-    border: 10px solid;
+    /* solid : 테두리를 실선으로 표시 */
+    border: 10px solid black;
 }
-#border1{
-    /* dashed : 테두리를 짧은 선으로 표시*/
+
+#border1 {
+    /* dashed : 테두리를 짧은 선으로 표시 */
     border-style: dashed;
 }
-#border2{
-border-style: dotted;
-border-color: hotpink;
-border-color: hotpink yellow;
-border-color: hotpink yellow greenyellow red;
-border-right-color: blueviolet;}
 
-#border3 {
-/* double : 테두리를 점선으로 표시*/
-border-style: double;
-/* border-radius : 테두리의 모서리를 둥글게 지정하는 속성*/
-border-radius: 20px;
-border-radius: 50%;
-/* top-left, top-right, bottom-left, bottom-right*/
-border-top-left-radius: 30px;
+#border2 {
+    /* dotted : 테두리를 점선으로 표시 */
+    border-style: dotted;
+    border-color: hotpink;
+    border-color: hotpink yellow;
+    border-color: hotpink yellow greenyellow red;
+    border-right-color: blueviolet;
 }
 
-/*포지셔닝*/
-/*float*/
-.float{
-    width: 100px
+#border3 {
+    /* double : 테두리를 이중선으로 표시 */
+    border-style: double;
+    /* border-radius : 테두리의 모서리를 둥글게 지정하는 속성 */
+    border-radius: 20px;
+    border-radius: 50%;
+    /* top-left, top-right, bottom-left, bottom-right */
+    border-top-left-radius: 30px;
+}
+
+/* 포지셔닝 */
+/* float */
+.float {
+    width: 100px;
     height: 100px;
     border: 1px solid;
-    float: :left;
+    float: left;
 }
 
 /* position */
-#outer{
-    position: absolute;
-    top: 10px;
-    left: 20px;
+#outer {
+    position: relative;
     top: 10px;
     left: 20px;
     width: 300px;
@@ -109,67 +121,78 @@ border-top-left-radius: 30px;
     background-color: yellow;
 }
 
-#first{
+#first {
+    position: absolute;
+    top: 50px;
+    left: 50px;
     width: 200px;
-    height: 200px
-    back-ground: yellowgreen;
+    height: 200px;
+    background-color: yellowgreen;
 }
 
-#second{
-    position:absolute;
+#second {
+    position: absolute;
     top: 100px;
     left: 100px;
     width: 100px;
     height: 100px;
     background-color: red;
 }
-#fixed{
+
+#fixed {
     position: fixed;
     right: 10px;
     bottom: 10px;
     width: 100px;
     height: 100px;
-   background-color: blue;
+    background-color: blue;
 }
-/*visibiliy*/
-.visibiliy{
+
+/*visibility*/
+.visibility {
     width: 100px;
     height: 100px;
-    border:1px solid;
+    border: 1px solid;
 }
-#vis1{
-    visibility: hidden; /*이미지가 숨겨짐*/
-    /*display :none; 아예 감춰버림, 공간안보임 /hidden은 그대로 숨기는애, 공간이 보임 */
-    display:none;
+
+#vis1 {
+    /* visibility: hidden; */
+    display: none;
     background-color: beige;
 }
-#vis2{
+
+#vis2 {
     background-color: skyblue;
 }
-/*z-index */
-#z-outer{
+
+/* z-index */
+#z-outer {
     position: relative;
     height: 250px;
 }
-.z-index{
+
+.z-index {
     width: 150px;
     height: 150px;
-    border:1px solid;
+    border: 1px solid;
     position: absolute;
 }
-#z-index1{ 
-background-color: orange;
-top: 100px;
-left: 100px;
-z-index: 1px;/*아래 일수록 내려간다.*/
+
+#z-index1 {
+    background-color: orange;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
 }
-#z-index2{
-background-color: blueviolet;
-top: 50px;
-left: 50px;
-z-index: 9999;
+
+#z-index2 {
+    background-color: blueviolet;
+    top: 50px;
+    left: 50px;
+    z-index: 9999;
 }
-#z-index3{
-background-color: green;
-z-index: -1;
+
+#z-index3 {
+    background-color: green;
+    z-index: -1;
 }
