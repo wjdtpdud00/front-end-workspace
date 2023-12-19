@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>실습문제3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습문제3</title>
 </head>
+
 <body>
-    <h2>주문하기</h2>
-    <form action="" name="custumer name">
+  <h2>주문하기</h2>
+  <form action="" name="custumer name">
     <label> 고객명 : </label>
     <input type="text" id="name" name="name" />
 
-<br><br>
+    <br><br>
 
     <label for="phone"> 전화번호 : </label>
     <input type="tel" id="phone" name="phone" />
-    
-<br><br>
 
-<label for="email"> E-mail : </label>
-<input type="email" name="email" />
-<br><br>
+    <br><br>
 
-
-<fieldset>
-    <legend>피자 사이즈</legend>
-<br>
-    <input type="radio" id="small" name="size" value="small"/>
-    <label for="small">small</label> <br><br>
-    <input type="radio" id="medium" name="size" value="medium"/>
-    <label for="medium">medium</label> <br><br>
-    <input type="radio" id="large" name="size" value="large"/>
-    <label for="large">large</label> <br><br>
-  </fieldset>
-<!--(input:chekebox[name="topping"]+label)*4-->
-  <fieldset>
-    <legend>토핑 선택</legend>
-    <input type="checkbox" id="bacon"name="toping" value="bacon">
-    <label for="bacon">베이컨</label> <br><br>
-    <input type="checkbox" name="toping" value="cheeze" id="cheese">
-    <label for="cheese">치즈</label><br><br>
-    <input type="checkbox" name="toping" value="onion">양파 <br><br>
-    <input type="checkbox" name="toping" value="mushroom">버섯 <br><br>
-  </fieldset>
-<p>
+    <label for="email"> E-mail : </label>
+    <input type="email" name="email" />
+    <br><br>
 
 
-    <label for="time" >희망 배송 시간 : </label>
-    <input type="time" id="time" name="time">
-    <br/><br/>
-</p>
+    <fieldset>
+      <legend>피자 사이즈</legend>
+      <br>
+      <input type="radio" id="small" name="size" value="small" />
+      <label for="small">small</label> <br><br>
+      <input type="radio" id="medium" name="size" value="medium" />
+      <label for="medium">medium</label> <br><br>
+      <input type="radio" id="large" name="size" value="large" />
+      <label for="large">large</label> <br><br>
+    </fieldset>
+    <!--(input:chekebox[name="topping"]+label)*4-->
+    <fieldset>
+      <legend>토핑 선택</legend>
+      <input type="checkbox" id="bacon" name="toping" value="bacon">
+      <label for="bacon">베이컨</label> <br><br>
+      <input type="checkbox" name="toping" value="cheeze" id="cheese">
+      <label for="cheese">치즈</label><br><br>
+      <input type="checkbox" name="toping" value="onion">양파 <br><br>
+      <input type="checkbox" name="toping" value="mushroom">버섯 <br><br>
+    </fieldset>
+    <p>
 
-<label for="memo">배송 시 요청사항 :</label>
-<textarea name="memo" id="memo" cols="30" rows="10" style="resize: none" placeholder="내용을 입력하세요"></textarea> <br><br>
 
-<input type="submit" value="주문하기" ></input>
-</form>
+      <label for="time">희망 배송 시간 : </label>
+      <input type="time" id="time" name="time">
+      <br /><br />
+    </p>
+
+    <label for="memo">배송 시 요청사항 :</label>
+    <textarea name="memo" id="memo" cols="30" rows="10" style="resize: none" placeholder="내용을 입력하세요"></textarea>
+    <br><br>
+
+    <input type="submit" value="주문하기"></input>
+  </form>
 </body>
+
 </html>

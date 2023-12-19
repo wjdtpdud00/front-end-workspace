@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" onsubmit="return validate()">
         <div>
             <label for="userId">* 아이디 : </label>
             <input type="text" id="userId" name="userId" />
@@ -166,12 +166,9 @@
                 email.focus();
                 return false;
             }
-            return true; //전송 보내겠다!
+            return true; // 전송 보내겠다!
         }
     </script>
-</body>
-
-</html>
 </body>
 
 </html>

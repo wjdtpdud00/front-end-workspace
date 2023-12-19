@@ -1,0 +1,268 @@
+/* 많이 쓰이는 컬러 , 변수로 지정하기 */
+:root {
+    /* 변수명 짓기 */
+    --main-color: #4285f4;
+}
+
+.container {
+    width: 1020px;
+    margin: auto;
+
+
+}
+
+/* tob-bar */
+.tob-bar {
+    background-color: #f0f0f0;
+    /* 양쪽 사이드에 놓기 */
+    display: flex;
+    justify-content: space-between;
+    /* 글씨 작게 만들기 */
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+/* header */
+header {
+    display: flex;
+}
+
+/* 카테고리 ,  */
+.category-btn {
+    /* var() 상수 가져오기 */
+    background-color: var(--main-color);
+    color: white;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-btn i {
+    cursor: pointer;
+    font-size: 1.8rem;
+    /* 카테고리 글자, 아이콘 가운데로 배열 */
+    margin-bottom: 10px;
+
+}
+
+.header-main {
+    width: 100%;
+}
+
+.header-main-top {
+    display: flex;
+    align-items: center;
+    /* 전체적으로 간격 넓히기 */
+    margin: 30px;
+
+}
+
+.logo img {
+    width: 170px;
+}
+
+/* 검색창 선 만들기 */
+.header-main-top form {
+    border: 2px solid var(--main-color);
+    /* 선과 컨텐츠들이 딱맞게 채워짐 */
+    display: flex;
+    /* 아래 absolute에 영향 안받게끔. */
+    position: relative;
+    flex: 1;
+    /* 양사이드 넓히기 */
+    margin: 0 20px;
+}
+
+/* form 바로아래있는 i */
+.header-main-top form input {
+    padding: 5px;
+    padding-right: 50px;
+    /* 기본으로 아웃라인이 생김, 없애줌 */
+    outline: none;
+    flex: 1;
+}
+
+.header-main-top form>i,
+.header-main-top form>button {
+    /* 뒤에 인풋값이 끝까지 들어감 */
+    position: absolute;
+    /* 부모요소기준 비율로 크기키움 */
+    font-size: 1.2rem;
+    /* 돋보기모양 폼에 딱 맞춰짐 */
+    height: 100%;
+    line-height: 100%;
+}
+
+/* 마이크 아이콘 */
+.header-main-top form>i {
+    top: 0;
+    right: 30px;
+    display: flex;
+    /* 위아래축 중의 가운데 */
+    align-items: center;
+    color: #999;
+}
+
+.header-main-top form>button {
+    top: 0;
+    right: 0;
+    color: var(--main-color);
+    /* 버튼 선과 배경색 없앰. */
+    background: none;
+    border: none;
+}
+
+.header-main-icon {
+    text-align: center;
+}
+
+/* 사람, 장바구니 아이콘 다루기 */
+.header-main-icon i {
+    color: #555;
+    /* 둘사이 간격 벌리기 */
+    margin-bottom: 10px;
+
+
+}
+
+.header-main-icon p {
+    font-size: 0.8rem;
+
+}
+
+/* header-main-bottom */
+.header-main-bottom {
+    width: 880px;
+    /* 한줄로 만들고 텍스트 감추기 */
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    /* header-main-bottom i의 부모이므로 영향안받게함 */
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.header-main-bottom a {
+    display: flex;
+    /* 시작점을 당겨서 들어감. */
+    transform: translateX(30px);
+    /* 글자들 높이정렬 */
+    align-items: center;
+    /* 컨텐츠들 간격 띄움 */
+    margin-right: 10px;
+    transition: 2s;
+}
+
+/* .header-main-bottom a 코드와 오른쪽을 클릭했을 때 같이되므로, 그때 작동하겠음 */
+.header-main-bottom a.header-main-bottom-right {
+    transform: translateX(-375px);
+}
+
+.header-main-bottom img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* <> 아이콘 */
+.header-main-bottom i {
+    background: white;
+    width: 30px;
+    height: 100%;
+    font-size: 1.2rem;
+    position: absolute;
+    display: flex;
+    /* 분홍배경 가운데 아이콘 옮기기 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.header-main-bottom i:first-child {
+    top: 0;
+    left: 0;
+}
+
+.header-main-bottom i:last-child {
+    top: 0;
+    right: 0;
+}
+
+/* header - category */
+.category {
+    background: white;
+    border: 1px solid #eee;
+    position: absolute;
+    /* top: 155px; */
+    /* 감춰진 상태에서 시작하게함. */
+    display: flex;
+    /* display: none; */
+}
+
+.category-list {
+    margin: 10px;
+    width: 170px;
+}
+
+.category-item {
+    display: flex;
+    margin: 20px 0;
+}
+
+/* span한테만 효과를 준다. */
+.category-item:hover span {
+    text-decoration: underline;
+}
+
+/* 마우스를 올렸을때 */
+.category-item:hover {
+    color: var(--main-color);
+    /* 아이콘까지 다들어감 */
+}
+
+.category-item:hover i:last-child {
+    display: inline;
+}
+
+/*나머지를 채우고 ,<i class="fa-solid fa-caret-right"></i> 밀어버림. */
+.category-item span {
+    flex: 1;
+}
+
+/* 카테고리안에 아이콘들 조작 */
+.category-item i:first-child {
+    font-size: 1.2rem;
+    width: 40px;
+    text-align: center;
+}
+
+.category-item i:last-child {
+    display: none;
+}
+
+.category-sub {
+    position: relative;
+    background-color: pink;
+    width: 600px;
+    display: none;
+}
+
+.category-sub-item {
+    background-color: skyblue;
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 435px;
+    display: none;
+}
+
+.category-sub-item img {
+    position: absolute;
+    width: 450px;
+    bottom: 0;
+    right: 0;
+}

@@ -2,28 +2,21 @@ header {
     width: 400px;
     height: 100vh;
     position: fixed;
-    /* 밑에 깔린사진 올라오게함 */
-    background-image: url("../../resources/background.jpg");
+    background-image: url(../../resources/background.jpg);
     background-size: cover;
     background-position: center;
-    /* size와 포지션 거의 세트임 */
 }
 
 .header-blackbox {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* 마지막칸에서 투명도 조절해줌 */
-    opacity: 100%;
-    /* 투명도 조절 */
 }
 
 .header-content {
     width: 100%;
     height: 100%;
-    /* 내용들의 부모태그라서 여기서 적용함 */
     position: absolute;
-    /* 위에  겹겹이 쌓는것 */
     top: 0;
     left: 0;
     color: white;
@@ -36,36 +29,26 @@ header {
 .header-content h1 {
     font-size: 5rem;
     border-bottom: 2px solid white;
-    /* 밑줄 그어줌 , solid는 실선*/
     padding-bottom: 15px;
-    /* 패딩과 바텀사이를 넓혀줌 */
-    width: 60%;
-    /* logo의 크기를 더 키워주는 효과 */
+    width: 70%;
     text-align: center;
     margin-top: 80px;
-    /* 아래로 내려줌 */
 }
 
 .header-content nav {
     margin-bottom: 100px;
-    /* 위로 땡긴다 */
 }
 
 .header-content a {
     color: white;
     display: block;
-    /* 나란히 안되게끔 */
     font-size: 1.8rem;
     margin: 20px;
-    /* 메뉴들의 사이간격 넓혀줌 */
-
 }
 
 section {
     padding: 20px;
     padding-left: 420px;
-    text-align: center;
-    /* 글 그림 다 가운데 정렬 */
     display: flex;
     flex-direction: column;
 }
@@ -74,20 +57,15 @@ section h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 section img {
     width: 100%;
     max-width: 800px;
-    /* 이미지가 800이하에서 줄어들음 */
     margin-bottom: 20px;
-    /* 주스그림과 글 사이 20px 띄어줌 */
     align-self: center;
-    /* 이미지만 센터로감 */
 }
 
 section p {
     line-height: 1.8;
-    text-align: left;
 }
