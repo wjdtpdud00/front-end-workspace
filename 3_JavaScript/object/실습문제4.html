@@ -113,6 +113,7 @@
             }
         }
 
+
         userId.addEventListener("input", function (e) {
             inputHandler(
                 e,
@@ -149,6 +150,9 @@
             inputHandler(e, emailCheck(), "이메일 형식에 맞춰서 입력하시오.");
         });
 
+        //강사님이 작성한 validate라는 함수의 기능은
+        //이 모든 form(input 들)에 값들이 개발자의 의도(정규식)대로 잘 작성했는지
+        //검증하는 함수
         function validate() {
             if (!userIdCheck()) {
                 userId.focus();
